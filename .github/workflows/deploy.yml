@@ -19,5 +19,5 @@ jobs:
           script: |
             cd /opt/grigso/hackaton
             git pull origin main
-            pip install -e .
+            pip install -r requirements.txt
             sudo systemctl restart hackaton
