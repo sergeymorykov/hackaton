@@ -17,6 +17,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            sudo -i
             cd /opt/grigso/hackaton
             git pull origin main
             pip install -r requirements.txt
