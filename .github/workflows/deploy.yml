@@ -20,7 +20,9 @@ jobs:
             sudo sh -c "
               cd /opt/grigso/hackaton &&
               git pull origin main &&
-              pip install -e ".[dev]" &&
+              python3 -m pip install -e '.[dev]' &&
+              cp hackaton.service /etc/systemd/system/hackaton.service &&
               systemctl daemon-reload &&
-              python3 -m src.bot
+              systemctl restart hackaton &&
+              systemctl status hackaton --no-pager -l
             "

@@ -1,0 +1,15 @@
+[Unit]
+Description=Hackaton Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=grigso
+WorkingDirectory=/opt/grigso/hackaton
+ExecStart=/usr/bin/python3 -m src.bot
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
