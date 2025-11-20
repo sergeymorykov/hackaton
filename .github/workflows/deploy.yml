@@ -17,8 +17,10 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            sudo -i
-            cd /opt/grigso/hackaton
-            git pull origin main
-            pip install -e .
-            sudo systemctl restart hackaton
+            sudo sh -c "
+              cd /opt/grigso/hackaton &&
+              git pull origin main &&
+              pip install -e . &&
+              systemctl daemon-reload &&
+              systemctl restart hackaton
+            "
