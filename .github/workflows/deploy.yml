@@ -20,7 +20,7 @@ jobs:
             sudo sh -c "
               cd /opt/grigso/hackaton &&
               git pull origin main &&
-              pip install -e . &&
+              pip install -e ".[dev]" &&
               systemctl daemon-reload &&
-              python3 src/main.py
+              python3 src.bot
             "
