@@ -1,6 +1,6 @@
 import pytest
 from types import SimpleNamespace
-from unittest.mock import AsyncMock, MagicMock
+from unittest.mock import AsyncMock
 
 from src.ai_client import AIClient
 from src.config import Settings

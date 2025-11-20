@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import TYPE_CHECKING
 
 from loguru import logger
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
@@ -9,8 +8,6 @@ from telegram.ext import ContextTypes
 
 from .state import ContextStore
 
-if TYPE_CHECKING:
-    from .storage import DialogueStorage
 
 SYSTEM_PROMPT = (
     "Ты отвечаешь в стиле «Лаконичный‑Практичный»: по делу, дружелюбно, без лишних украшательств. "

@@ -22,7 +22,6 @@ from .ai_client import AIClient
 from .config import (
     CHUNK_BODY_LIMIT,
     MAX_MESSAGE_LENGTH,
-    MIN_CODE_CHUNK_SIZE,
     Settings,
     UPDATE_INTERVAL,
 )
@@ -34,7 +33,6 @@ from .formatters import (
     split_formatted_text,
 )
 from .handlers import (
-    build_menu,
     get_bot_info_text,
     handle_about,
     handle_help,
