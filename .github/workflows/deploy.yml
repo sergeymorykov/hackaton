@@ -25,3 +25,4 @@ jobs:
               systemctl daemon-reload &&
               systemctl restart hackaton &&
               systemctl status hackaton --no-pager -l
+            "
