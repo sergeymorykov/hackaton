@@ -22,5 +22,5 @@ jobs:
               git pull origin main &&
               pip install -e ".[dev]" &&
               systemctl daemon-reload &&
-              python3 src.bot
+              python3 -m src.bot
             "
